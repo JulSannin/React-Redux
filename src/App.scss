@@ -1,0 +1,52 @@
+@use 'styles' as *;
+@use 'styles/reset.scss';
+@use 'styles/fonts.scss';
+@use 'styles/breakpoints.scss' as breakpoints;
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 720px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flx-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 170px;
+}
