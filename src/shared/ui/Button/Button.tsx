@@ -7,6 +7,7 @@ type ButtonProps = {
 	icon?: ReactNode;
 	outline?: boolean;
 	disabled?: boolean;
+	// Объединение вместо string, чтобы опечатка не прошла проверку типов.
 	type?: 'button' | 'submit';
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 };
@@ -19,6 +20,9 @@ export const Button = ({
 	type = 'button',
 	onClick,
 }: ButtonProps) => {
+	// disabled — атрибутом, а не классом: по нему браузер сам блокирует клики
+	// и применяет стиль .button:disabled.
+	// Дефолт type='button': иначе кнопка внутри формы молча отправляла бы её.
 	return (
 		<button
 			type={type}

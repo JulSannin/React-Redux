@@ -20,3 +20,9 @@
 	@include breakpoints.devices(sm) {
 	}
 }
+
+.message-error {
+	display: block;
+	margin-top: 20px;
+	color: $error-color;
+}

@@ -6,6 +6,7 @@ import type { Task } from '../../model/types';
 import { STATUS_LABELS, PRIORITY_LABELS } from '../../model/labels';
 import './style.scss';
 
+// Обработчики без аргументов: какую задачу передали в карточку, родитель и так знает.
 type TaskCardProps = {
 	task: Task;
 	onEdit: () => void;
@@ -23,6 +24,8 @@ export const TaskCard = ({
 				<span className="task-title">Задача</span>
 				<span className="task">{title}</span>
 			</div>
+			{/* В className — значение enum (на него завязаны стили),
+				на экран — подпись из словаря. */}
 			<div className="flex">
 				<span className="priority-title">Приоритет</span>
 				<span className={classNames(`priority--${priority}`, 'priority')}>

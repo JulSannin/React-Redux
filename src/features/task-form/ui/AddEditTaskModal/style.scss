@@ -63,3 +63,63 @@
 		}
 	}
 }
+
+.modal-status {
+	margin-top: 20px;
+	span {
+		font-size: 14px;
+		font-weight: 700;
+		color: $gray;
+	}
+}
+
+.status-buttons {
+	display: flex;
+	gap: 13px;
+	margin-top: 12px;
+	@include breakpoints.devices(sm) {
+		gap: 10px;
+	}
+	li {
+		border: 1px solid $warning-color;
+		border-radius: 10px;
+		font-size: 14px;
+		font-weight: 500;
+		color: $warning-color;
+		text-transform: capitalize;
+		padding: 10px 0;
+		width: 90px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.todo {
+		border: 1px solid $error-color;
+		color: $error-color;
+		&-selected {
+			background-color: $error-color;
+			color: $white;
+		}
+	}
+	.progress {
+		border: 1px solid $warning-color;
+		color: $warning-color;
+		&-selected {
+			background-color: $warning-color;
+			color: $white;
+		}
+	}
+	.done {
+		border: 1px solid $success-color;
+		color: $success-color;
+		&-selected {
+			background-color: $success-color;
+			color: $white;
+		}
+	}
+}
+
+.message-error {
+	display: block;
+	margin-top: 20px;
+	color: $error-color;
+}
