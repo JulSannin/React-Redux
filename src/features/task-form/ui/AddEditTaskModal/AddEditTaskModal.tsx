@@ -5,7 +5,8 @@ import { Priority, PRIORITY_LABELS, Status, STATUS_LABELS, Task } from '@/entiti
 import './style.scss';
 import { FormEvent, useState } from 'react';
 
-// массивы значений enum, при добавлении нового приоритета или статуса в enum, массив значений тоже нужно дополнять
+// Порядок отображения. TypeScript не подскажет забытый вариант при
+// добавлении в enum — дополнять вручную.
 const PRIORITY_ORDER: Priority[] = [Priority.HIGH, Priority.MEDIUM, Priority.LOW];
 const STATUS_ORDER: Status[] = [Status.DONE, Status.PROGRESS, Status.TODO];
 

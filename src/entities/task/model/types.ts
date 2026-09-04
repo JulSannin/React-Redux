@@ -1,13 +1,14 @@
+// Подписи на русском — в labels.ts, здесь только значения (wire-формат и CSS-классы).
 export enum Priority {
-	LOW = 'low', // Низкий
-	MEDIUM = 'medium', // Средний
-	HIGH = 'high', // Высокий
+	LOW = 'low',
+	MEDIUM = 'medium',
+	HIGH = 'high',
 }
 
 export enum Status {
-	TODO = 'todo', // Сделать
-	PROGRESS = 'progress', // В прогрессе
-	DONE = 'done', // Сделано
+	TODO = 'todo',
+	PROGRESS = 'progress',
+	DONE = 'done',
 }
 
 export type Task = {
